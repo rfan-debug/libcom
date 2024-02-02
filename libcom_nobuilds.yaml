@@ -1,6 +1,6 @@
 name: Libcom
 channels:
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch
+  - pytorch
   - conda-forge
   - defaults
 dependencies:

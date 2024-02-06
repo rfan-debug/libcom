@@ -30,7 +30,7 @@ from .source.ControlCom.ldm.data.open_images_control import get_tensor, get_tens
 
 cur_dir   = os.path.dirname(os.path.abspath(__file__))
 model_set = ['ControlCom'] 
-task_set  = ['blending', 'harmonization'] # 'viewsynthesis', 'composition'
+task_set  = ['blending', 'harmonization', 'viewsynthesis', 'composition']
 
 class ControlComModel:
     """
@@ -181,6 +181,11 @@ class ControlComModel:
                 indicator.append([0,0])
             elif t == 'harmonization':
                 indicator.append([1,0])
+            elif t == "viewsynthesis":
+                indicator.append([0,1])
+            elif t == "composition":
+                indicator.append([1,1])
+
         return indicator
                 
     @torch.no_grad()
